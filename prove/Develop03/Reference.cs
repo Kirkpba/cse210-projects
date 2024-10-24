@@ -6,8 +6,7 @@ class Reference
     private int? _verseEnd; // The ending verse # set to nullable if only one verse.
 
     //Constructor to initialize the reference for book, chapter, and the starting and ending verses.
-    //This one constructor can handle a single verse or multiple saving lines of code to make a new
-    //constructor altogether.
+    //This one constructor handles one verse
     public Reference(string book, int chapter, int verseStart)
     {
         _book = book;
@@ -16,6 +15,7 @@ class Reference
         _verseEnd = null;
     }
 
+     //This one constructor handles multiple verses.
     public Reference(string book, int chapter, int verseStart, int verseEnd)
     {
         _book = book;
