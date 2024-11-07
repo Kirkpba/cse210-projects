@@ -1,4 +1,4 @@
-// Thankful Activity Code.
+// Thankful Activity Class Code.
 class ThankfulActivity : Activity
 {
     private List<string> _prompts = new List<string> //List for prompts to ask the user.
@@ -9,13 +9,13 @@ class ThankfulActivity : Activity
         "What are you not thankful for?",
     };
 
-    //ListingActivity Class inherits from the base Activity class and gives a name and description for the activity. Constructor.
+    //ThankfulActivity Class inherits from the base Activity class and gives a name and description for the activity. Constructor.
     public ThankfulActivity() : base("Thankful Activity", "This activity will help you see positivity in your life by listing things you are thankful for.")
     {
 
     }
 
-    //Method that calls all the other methods to perform the ListingActivity.
+    //Method that calls all the other methods to perform the ThankfulActivity.
     public override void PerformActivity()
     {
         StartActivity();
@@ -37,6 +37,7 @@ class ThankfulActivity : Activity
 
     //Method that keeps track of time the user entered and will end when time runs out.
     //Method asks user for answers to the prompt and keeps track of the # of items entered.
+    //Will also display the entrys back to the user at the end.
     private void ListItems() 
     {
         List<string> items = new List<string>();
