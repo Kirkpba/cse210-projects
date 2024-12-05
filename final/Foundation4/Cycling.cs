@@ -10,7 +10,7 @@ public class Cycling : Activity
 
     public override double GetSpeed() => _speed;
 
-    public override double GetDistance() => (GetSpeed() * GetMinutes()) / 60;
+    public override double GetDistance() => GetSpeed() * GetMinutes() / 60;
     
     public override double GetPace() => 60 / GetSpeed();
 }
